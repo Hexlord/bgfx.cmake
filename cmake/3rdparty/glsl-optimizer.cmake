@@ -49,6 +49,8 @@ if( MSVC )
 endif()
 set_target_properties( mesa PROPERTIES FOLDER "bgfx/3rdparty" )
 
+target_link_libraries( glcpp mesa )
+
 # glsl-optimizer
 file( GLOB GLSL-OPTIMIZER_SOURCES ${BGFX_DIR}/3rdparty/glsl-optimizer/src/glsl/*.cpp ${BGFX_DIR}/3rdparty/glsl-optimizer/src/glsl/*.c )
 file( GLOB GLSL-OPTIMIZER_SOURCES_REMOVE ${BGFX_DIR}/3rdparty/glsl-optimizer/src/glsl/main.cpp ${BGFX_DIR}/3rdparty/glsl-optimizer/src/glsl/builtin_stubs.cpp )
